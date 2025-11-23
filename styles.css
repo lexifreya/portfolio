@@ -1,0 +1,245 @@
+/* PRIMARY COLORS */
+:root {
+    --electric-rose: #FF3FAE;
+    --midnight-obsidian: #0D0D14;
+
+    /* SECONDARY COLORS */
+    --ultraviolet-ember: #7A00FF;
+    --stormsteel-gray: #1E1F26;
+
+    /* ACCENT / POP COLORS */
+    --neon-cyan-pulse: #00F5FF;
+    --soft-halcyon-lavender: #C8A9FF;
+
+    /* TEXT COLORS */
+    --pure-crystal-white: #FFFFFF;
+    --soft-fog-white: #E6E6EC;
+
+    /* Modern Typography */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-primary);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: var(--midnight-obsidian);
+    color: var(--pure-crystal-white);
+}
+
+header {
+    background: linear-gradient(135deg, var(--electric-rose) 0%, var(--ultraviolet-ember) 40%, var(--neon-cyan-pulse) 100%);
+    color: var(--pure-crystal-white);
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--electric-rose);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 0;
+}
+
+main {
+    padding: 2rem;
+    background-color: var(--stormsteel-gray);
+    color: var(--soft-fog-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+section h2 {
+    color: var(--electric-rose);
+    border-bottom: 2px solid var(--ultraviolet-ember);
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--midnight-obsidian);
+    color: var(--soft-fog-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer a {
+    color: var(--neon-cyan-pulse);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: var(--electric-rose);
+}
+
+/* Buttons */
+button {
+    background-color: var(--electric-rose);
+    color: var(--pure-crystal-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: var(--ultraviolet-ember);
+    transform: scale(1.05);
+}
+
+/* Sparkle Enhancements */
+.sparkle {
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 5px;
+    background-color: var(--neon-cyan-pulse);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-cyan-pulse);
+    animation: fall linear;
+    opacity: 0.8;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* UI Kit */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 0 1rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-primary {
+    background-color: var(--electric-rose);
+    color: var(--pure-crystal-white);
+    border: none;
+}
+
+.button-primary:hover {
+    background-color: var(--ultraviolet-ember);
+    transform: scale(1.05);
+}
+
+.button-secondary {
+    background-color: var(--stormsteel-gray);
+    color: var(--soft-fog-white);
+    border: 1px solid var(--electric-rose);
+}
+
+.button-secondary:hover {
+    background-color: var(--electric-rose);
+    color: var(--pure-crystal-white);
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Shadows */
+.shadow-light {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-medium {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-heavy {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Spacing */
+.spacing-sm {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.spacing-md {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.spacing-lg {
+    margin: 2rem;
+    padding: 2rem;
+}
